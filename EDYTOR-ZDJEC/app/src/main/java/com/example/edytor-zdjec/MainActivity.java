@@ -16,12 +16,12 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    int dzwiek_val = 50;
-    int gamma_val = 50;
-    int grafika_val = 50;
+    int efekty_val = 50;
+    int jasnosc_val = 50;
+    int rozmycie_val = 50;
     int sort = 0;
 
-    String[] gat = {"Dzwiek", "Gamma", "Grafika"};
+    String[] gat = {"Efekty", "Jasnosc", "Rozmycie"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,23 +47,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String temp_rasa = (String) adapterView.getItemAtPosition(i);
-                if (temp_rasa == "Dzwiek") {
+                if (temp_rasa == "Efekty") {
                     bar.setEnabled(true);
-                    bar.setProgress(dzwiek_val);
-                    opcja.setText("Dzwiek:");
-                    show.setText("Wartosc: " + String.valueOf(dzwiek_val));
+                    bar.setProgress(efekty_val);
+                    opcja.setText("Efekty:");
+                    show.setText("Wartosc: " + String.valueOf(efekty_val));
                     sort = 1;
-                } else if (temp_rasa == "Gamma") {
+                } else if (temp_rasa == "Jasnosc") {
                     bar.setEnabled(true);
-                    bar.setProgress(gamma_val);
-                    opcja.setText("Gamma:");
-                    show.setText("Wartosc: " + String.valueOf(gamma_val));
+                    bar.setProgress(jasnosc_val);
+                    opcja.setText("Jasnosc:");
+                    show.setText("Wartosc: " + String.valueOf(jasnosc_val));
                     sort = 2;
                 } else {
                     bar.setEnabled(true);
-                    bar.setProgress(grafika_val);
-                    opcja.setText("Grafika:");
-                    show.setText("Wartosc: " + String.valueOf(grafika_val));
+                    bar.setProgress(rozmycie_val);
+                    opcja.setText("Rozmycie:");
+                    show.setText("Wartosc: " + String.valueOf(rozmycie_val));
                     sort = 3;
                 }
             }
@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 if (sort == 1){
-                    dzwiek_val = bar.getProgress();
+                    efekty_val = bar.getProgress();
                 } else if (sort == 2) {
-                    gamma_val = bar.getProgress();
+                    jasnosc_val = bar.getProgress();
                 } else {
-                    grafika_val = bar.getProgress();
+                    rozmycie_val = bar.getProgress();
                 }
             }
 
