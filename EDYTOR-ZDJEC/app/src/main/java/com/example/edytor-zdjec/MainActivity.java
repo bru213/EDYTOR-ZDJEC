@@ -17,11 +17,11 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     int efekty_val = 50;
-    int jasnosc_val = 50;
-    int rozmycie_val = 50;
+    int przytnij_val = 50;
+    int tekst_val = 50;
     int sort = 0;
 
-    String[] gat = {"Efekty", "Jasnosc", "Rozmycie"};
+    String[] gat = {"Efekty", "Przytnij", "Tekst"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,17 +53,17 @@ public class MainActivity extends AppCompatActivity {
                     opcja.setText("Efekty:");
                     show.setText("Wartosc: " + String.valueOf(efekty_val));
                     sort = 1;
-                } else if (temp_rasa == "Jasnosc") {
+                } else if (temp_rasa == "Przytnij") {
                     bar.setEnabled(true);
-                    bar.setProgress(jasnosc_val);
-                    opcja.setText("Jasnosc:");
-                    show.setText("Wartosc: " + String.valueOf(jasnosc_val));
+                    bar.setProgress(przytnij_val);
+                    opcja.setText("Przytnij");
+                    show.setText("Wartosc: " + String.valueOf(przytnij_val));
                     sort = 2;
                 } else {
                     bar.setEnabled(true);
-                    bar.setProgress(rozmycie_val);
-                    opcja.setText("Rozmycie:");
-                    show.setText("Wartosc: " + String.valueOf(rozmycie_val));
+                    bar.setProgress(tekst_val);
+                    opcja.setText("Tekst");
+                    show.setText("Wartosc: " + String.valueOf(tekst_val));
                     sort = 3;
                 }
             }
@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 if (sort == 1){
                     efekty_val = bar.getProgress();
                 } else if (sort == 2) {
-                    jasnosc_val = bar.getProgress();
+                    przytnij_val = bar.getProgress();
                 } else {
-                    rozmycie_val = bar.getProgress();
+                    tekst_val = bar.getProgress();
                 }
             }
 
