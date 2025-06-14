@@ -1,4 +1,4 @@
-package com.example.ustawienia_gry;
+package com.example.edytor-zdjec;
 
 import org.junit.Test;
 
