@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String temp_rasa = (String) adapterView.getItemAtPosition(i);
-                if (temp_rasa == "Efekty") {
+                String wybranaOpcja = (String) adapterView.getItemAtPosition(i);
+                if (wybrana_opcja == "Efekty") {
                     bar.setEnabled(true);
                     bar.setProgress(efekty_val);
                     opcja.setText("Efekty:");
                     show.setText("Wartosc: " + String.valueOf(efekty_val));
                     sort = 1;
-                } else if (temp_rasa == "Przytnij") {
+                } else if (wybrana_opcja == "Przytnij") {
                     bar.setEnabled(true);
                     bar.setProgress(przytnij_val);
                     opcja.setText("Przytnij");
