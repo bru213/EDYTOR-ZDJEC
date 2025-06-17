@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int tekst_val = 50;
     int sort = 0;
 
-    String[] gat = {"Efekty", "Przytnij", "Tekst"};
+    String[] opcja = {"Efekty", "Przytnij", "Tekst"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayAdapter<String> arr;
-        arr = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, gat);
+        arr = new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, opcja);
         list.setAdapter(arr);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
